@@ -4,13 +4,19 @@
 
 It is a Go command-line port of the [GPU VRAM Calculator](https://huggingface.co/spaces/aquanode/gpu-vram-calculator) Space by Aquanode. It uses the Space's formulas, its catalog of 1,333 models, and its list of 29 GPUs.
 
-## Build
+## Install
 
 Requires Go 1.22 or newer. The tool uses only the standard library.
 
 ```sh
-go build -o bin/vramcalc ./cmd/vramcalc   # writes bin/vramcalc
-go install ./cmd/vramcalc                 # installs into $(go env GOPATH)/bin
+go install github.com/Apothic-AI/vramcalc/cmd/vramcalc@latest   # into $(go env GOPATH)/bin
+```
+
+To build from a clone instead:
+
+```sh
+git clone https://github.com/Apothic-AI/vramcalc && cd vramcalc
+go build -o bin/vramcalc ./cmd/vramcalc                          # writes bin/vramcalc
 ```
 
 ## Usage
@@ -59,3 +65,7 @@ Exit codes: `0` success, `1` lookup failed (unknown model or no matches), `2` ba
 go vet ./...
 go test ./...
 ```
+
+## License
+
+Apache License 2.0. See [LICENSE](LICENSE).
