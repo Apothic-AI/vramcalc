@@ -9,7 +9,7 @@ It is a Go command-line port of the [GPU VRAM Calculator](https://huggingface.co
 Requires Go 1.22 or newer. The tool uses only the standard library.
 
 ```sh
-go install github.com/Apothic-AI/vramcalc/cmd/vramcalc@latest   # into $(go env GOPATH)/bin
+go install github.com/Apothic-AI/vramcalc/cmd/vramcalc@main   # latest commit, into $(go env GOPATH)/bin
 ```
 
 To build from a clone instead:
